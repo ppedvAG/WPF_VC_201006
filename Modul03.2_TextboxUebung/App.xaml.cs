@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Container
+namespace Modul03._2_TextboxUebung
 {
     /// <summary>
     /// Interaction logic for App.xaml

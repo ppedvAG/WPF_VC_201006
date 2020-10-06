@@ -1,7 +1,7 @@
-﻿<Application x:Class="Container.App"
+﻿<Application x:Class="Modul03._2_TextboxUebung.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Container"
+             xmlns:local="clr-namespace:Modul03._2_TextboxUebung"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

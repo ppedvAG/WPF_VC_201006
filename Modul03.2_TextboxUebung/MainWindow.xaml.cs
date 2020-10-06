@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Container
+namespace Modul03._2_TextboxUebung
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
