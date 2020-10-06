@@ -1,0 +1,116 @@
+﻿<Window x:Class="Container.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Container"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="335" Width="332">
+
+    <ScrollViewer VerticalScrollBarVisibility="Visible"
+                  HorizontalScrollBarVisibility="Visible">
+        <StackPanel>
+            <Canvas Height="200">
+                <Rectangle Fill="Blue"
+                       Height="50" Width="50"
+                       Canvas.Left="100"
+                       Canvas.Top="100"/>
+                <Ellipse Fill="Green"
+                     Height="100" Width="100"
+                     Canvas.Left="100"
+                     Canvas.Top="100"
+                     Panel.ZIndex="-1"/>
+                <Button Content="Klick"
+                    Canvas.Left="50"
+                    Canvas.Top="50"/>
+            </Canvas>
+
+            <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Left">
+                <Button Content="Button"/>
+                <Button Content="Button"/>
+                <Button Content="Button"/>
+                <Button Content="Button"/>
+                <Button Content="Button"/>
+                <Button Content="Button"/>
+                <Button Content="Button"/>
+                <Button Content="Button"/>
+                <Button Content="Button"/>
+            </StackPanel>
+
+            <WrapPanel Orientation="Horizontal">
+                <Button Content="Button"/>
+                <Button Content="Button"/>
+                <Button Content="Button"/>
+                <Button Content="Button"/>
+                <Button Content="Button"/>
+                <Button Content="Button"/>
+                <Button Content="Button"/>
+                <Button Content="Button"/>
+                <Button Content="Button"/>
+            </WrapPanel>
+
+            <Separator Margin="5"/>
+
+            <DockPanel LastChildFill="True">
+                <Button Content="LEFT"
+                    DockPanel.Dock="Left"/>
+                <Button Content="TOP"
+                    DockPanel.Dock="Top"/>
+                <Button Content="BOTTOM"
+                    DockPanel.Dock="Bottom"/>
+                <Button Content="RIGHT"
+                    DockPanel.Dock="Right"/>
+                <Button Content="MITTE"/>
+                <Button Content="MITTE"/>
+                <Button Content="MITTE"/>
+            </DockPanel>
+
+            <Border BorderBrush="Orange" BorderThickness="2"
+                Margin="5" Padding="5">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Button Content="Button1"
+                    Grid.Column="0" Grid.Row="0"/>
+                    <Button Content="Button2"
+                    Grid.Column="1" Grid.Row="1"/>
+                    <Button Content="Button3"
+                    Grid.Column="2" Grid.Row="0"/>
+                    <Button Content="Button4"
+                    Grid.Column="2" Grid.Row="1"
+                    Grid.ColumnSpan="2"/>
+                </Grid>
+            </Border>
+
+            <UniformGrid Columns="3" Rows="3">
+                <Button Content="Button1"/>
+                <Button Content="Button2"/>
+                <Button Content="Button3"/>
+                <Button Content="Button4"/>
+                <Button Content="Button5"/>
+                <Button Content="Button5"/>
+                <Button Content="Button5"/>
+                <Button Content="Button5"/>
+                <Button Content="Button5"/>
+                <Button Content="Button9"/>
+                <Button Content="Button9"/>
+            </UniformGrid>
+
+            <Viewbox Stretch="Uniform"
+                 Height="50">
+                <Button Content="Klick mich"/>
+            </Viewbox>
+
+        </StackPanel>
+
+    </ScrollViewer>
+</Window>

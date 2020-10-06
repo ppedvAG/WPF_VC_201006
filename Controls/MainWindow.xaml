@@ -47,7 +47,9 @@
                  Height="60"
                  AcceptsReturn="True"
                  AcceptsTab="True"
-                 TextWrapping="WrapWithOverflow">
+                 TextWrapping="WrapWithOverflow"
+                 
+                 ScrollViewer.VerticalScrollBarVisibility="Visible">
 
             <TextBox.ContextMenu>
                 <!--Die meisten Steuerelemente haben eine ContextMenu-Property, in welche ein ContextMenu eingepflegt werden kann.-->
