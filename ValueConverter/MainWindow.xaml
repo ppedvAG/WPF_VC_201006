@@ -1,0 +1,47 @@
+﻿<Window x:Class="ValueConverter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ValueConverter"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="458" Width="461">
+    
+    <Window.Resources>
+        <local:DoubleToBrushConverter x:Key="double2brush"/>
+    </Window.Resources>
+    
+    <StackPanel>
+        <Slider x:Name="Sdr_Rot" Minimum="0" Maximum="255" Value="0"/>
+        <Border BorderBrush="Black" BorderThickness="1" Width="100">
+            <Rectangle Width="100" Height="100" x:Name="Rct_Output"
+                       Fill="{Binding ElementName=Sdr_Rot, Path=Value, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource double2brush}}">
+                <!--<Rectangle.Fill>
+                    <Binding ElementName="Sdr_Rot" Path="Value" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.Converter>
+                            <local:DoubleToBrushConverter/>
+                        </Binding.Converter>
+                    </Binding>
+                </Rectangle.Fill>-->
+            </Rectangle>
+        </Border>
+
+        <Separator/>
+
+        <Slider/>
+        <Slider/>
+        <Slider/>
+        <Slider/>
+
+        <Rectangle>
+            <Rectangle.Fill>
+                <MultiBinding Converter="">
+                    <Binding/>
+                    <Binding/>
+                    <Binding/>
+                    <Binding/>
+                </MultiBinding>
+            </Rectangle.Fill>
+        </Rectangle>
+    </StackPanel>
+</Window>
