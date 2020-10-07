@@ -21,18 +21,22 @@ namespace Templates
     /// </summary>
     public partial class MainWindow : Window
     {
+        //Properties vom Typ ObservableCollection informieren die GUI automatisch über Veränderungen (z.B. neuer Listeneintrag). Sie eignen sich besonders gut
+        //für eine Bindung an ein ItemControl (z.B. ComboBox, ListBox, DataGrid, ...)
         public ObservableCollection<Person> Personenliste { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
 
+            //Erstellen von Bsp-Daten
             Personenliste = new ObservableCollection<Person>()
             {
                 new Person(){Vorname="Rainer", Nachname="Zufall", Alter=42},
                 new Person(){Vorname="Anna", Nachname="Nass", Alter=26}
             };
 
+            //Setzen des DataContext des Fensters auf sich selbst (Einfache Bindungen zu Properties in dieser Datei möglich)
             this.DataContext = this;
         }
 
@@ -43,7 +47,9 @@ namespace Templates
 
         private void Btn_Altern_Click(object sender, RoutedEventArgs e)
         {
+            //Erhöhung des Alters der Person im DataContextes des StackPanels
             (Spl_DataContextBsp.DataContext as Person).Alter++;
+            //Aufruf der 'Aktualisierungs-Methode' aus der Personen-Klasse
             (Spl_DataContextBsp.DataContext as Person).AktualisiereGUI();
         }
 
