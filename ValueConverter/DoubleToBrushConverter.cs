@@ -22,7 +22,7 @@ namespace ValueConverter
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
             //Hier nicht nötig, deshalb nicht implementiert
-            ththrow new NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

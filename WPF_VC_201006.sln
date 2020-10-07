@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul06.1_Bindings", "Bindi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul06.2_ValueConverter", "ValueConverter\Modul06.2_ValueConverter.csproj", "{901F83C2-7DBD-4209-823F-546558DC19BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul07_Styles", "Styles\Modul07_Styles.csproj", "{445BB324-ABA6-46AA-AEF0-C2EDE65C05D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{901F83C2-7DBD-4209-823F-546558DC19BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{901F83C2-7DBD-4209-823F-546558DC19BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{901F83C2-7DBD-4209-823F-546558DC19BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{445BB324-ABA6-46AA-AEF0-C2EDE65C05D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{445BB324-ABA6-46AA-AEF0-C2EDE65C05D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{445BB324-ABA6-46AA-AEF0-C2EDE65C05D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{445BB324-ABA6-46AA-AEF0-C2EDE65C05D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

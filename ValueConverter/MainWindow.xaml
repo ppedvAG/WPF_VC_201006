@@ -93,7 +93,7 @@
 
         </Grid>
 
-        <TextBlock Text="{Binding ElementName=Rct_Output, Path=Fill, StringFormat=Picked color: {0}, UpdateSourceTrigger=PropertyChanged}"
+        <TextBlock Text="{Binding ElementName=Rct_Output_2, Path=Fill, StringFormat=Picked color: {0}, UpdateSourceTrigger=PropertyChanged}"
                    HorizontalAlignment="Center" Margin="5"/>
         <Border BorderBrush="Black" BorderThickness="1" Width="100">
             <Rectangle x:Name="Rct_Output_2" Width="100" Height="100">
