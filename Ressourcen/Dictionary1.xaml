@@ -3,6 +3,7 @@
                     xmlns:local="clr-namespace:Ressourcen"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
+    <!--ResourceDictionaries können Applikationsübergreifend verwendet werden, da sie eigene Dateien sind-->
     <sys:String x:Key="stringAusDict">Ich bin ein Button</sys:String>
     
 </ResourceDictionary>

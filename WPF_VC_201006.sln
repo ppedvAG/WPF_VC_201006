@@ -17,9 +17,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04_RoutedEvents", "Rou
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul05_Resources", "Ressourcen\Modul05_Resources.csproj", "{B4B91DC2-6B47-49B8-BF21-103A37062B1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bindings", "Bindings\Bindings.csproj", "{9168C70D-3B6F-4FF3-A78B-D54565D5EC0D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul06.1_Bindings", "Bindings\Modul06.1_Bindings.csproj", "{9168C70D-3B6F-4FF3-A78B-D54565D5EC0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueConverter", "ValueConverter\ValueConverter.csproj", "{901F83C2-7DBD-4209-823F-546558DC19BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul06.2_ValueConverter", "ValueConverter\Modul06.2_ValueConverter.csproj", "{901F83C2-7DBD-4209-823F-546558DC19BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

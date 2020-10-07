@@ -6,6 +6,10 @@
         xmlns:local="clr-namespace:RoutedEvents"
         mc:Ignorable="d"
         Title="MainWindow" Height="572" Width="800">
+    
+    <!--RoutedEvents, wie PreviewMouseDown/MouseDown werden durch den kompletten Logic-Tree des XAML-Codes gereicht
+        und können auf jeder Ebene abgefangen und bearbeitet werden. Preview-Events werden von oben nach unten gereicht,
+        dann wird das entsprechende Element-Event geworfen, danach wird das Nicht-Preview-Event nach oben gereicht.-->
     <StackPanel x:Name="Aqua" Background="Aqua"
                             PreviewMouseDown="SP_PreviewMouseDown"
                             MouseDown="SP_MouseDown">

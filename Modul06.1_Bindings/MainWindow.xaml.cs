@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Ressourcen
+namespace Modul06._1_Bindings
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -27,8 +27,11 @@ namespace Ressourcen
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //Manipulation einer Ressource über deren Container und Key (Objekte, welche dynamisch angebunden sind, übernehmen sofort die Veränderung)
-            Spl_Main.Resources["globalFontSize"] = 50.0;
+            BindingExpression be = Tbx_Vier.GetBindingExpression(TextBox.TextProperty);
+
+            be.UpdateSource();
+
+            be.UpdateTarget();
         }
     }
 }
