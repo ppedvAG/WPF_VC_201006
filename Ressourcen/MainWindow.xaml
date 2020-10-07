@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ressourcen"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
-        xmlns:prop="clr-namespace:Resources.Properties"
+        xmlns:prop="clr-namespace:Ressourcen.Properties"
         mc:Ignorable="d"
         Title="MainWindow" Height="111" Width="391">
 
