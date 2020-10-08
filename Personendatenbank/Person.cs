@@ -17,7 +17,7 @@ namespace Personendatenbank
 
         public bool Verheiratet { get; set; }
 
-        public Color Lieblingsfarbe { get; set; }
+        public Colors Lieblingsfarbe { get; set; }
 
         public Gender Geschlecht { get; set; }
     }

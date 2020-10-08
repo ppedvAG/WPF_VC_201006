@@ -4,11 +4,32 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Personendatenbank"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="Neue Person" 
         Height="280" Width="285" ResizeMode="NoResize" 
         WindowStartupLocation="CenterScreen" Topmost="True"
         Style="{StaticResource Sty_Wnd}">
+
+    <Window.Resources>
+        <local:EnumToBoolConverter x:Key="enum2bool"/>
+        
+        <ObjectDataProvider x:Key="Odp_Colors"
+                            MethodName="GetType"
+                            ObjectType="{x:Type sys:Type}">
+            <ObjectDataProvider.MethodParameters>
+                <sys:String>System.Windows.Media.Colors, PresentationCore,
+            Version=3.0.0.0, Culture=neutral, 
+            PublicKeyToken=31bf3856ad364e35</sys:String>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+        
+        <ObjectDataProvider x:Key="Odp_ColorsProperties"
+                            ObjectInstance="{StaticResource Odp_Colors}"
+                            MethodName="GetProperties"/>
+
+
+    </Window.Resources>
 
     <Window.DataContext>
         <local:Person/>
@@ -44,35 +65,41 @@
         <TextBox x:Name="Tbx_Vorname"
                  Grid.Column="1"
                  Text="{Binding Vorname}"/>
-        
+
         <TextBox x:Name="Tbx_Nachname"
                  Grid.Column="1" Grid.Row="1"
                  Text="{Binding Nachname}"/>
-        
+
         <DatePicker x:Name="Dpr_Geburtsdatum"
                     Grid.Column="1" Grid.Row="2"
                     SelectedDate="{Binding Geburtsdatum}"/>
-        
+
         <CheckBox x:Name="Cbx_Verheiratet"
                   Grid.Column="1" Grid.Row="3"
                   IsChecked="{Binding Verheiratet}"/>
-        
+
         <ComboBox x:Name="Cbb_Lieblingsfarbe"
-                  Grid.Column="1" Grid.Row="4">
-            <ComboBoxItem Content="Grün" Foreground="Green"/>
-            <ComboBoxItem Content="Blau" Foreground="Blue"/>
-            <ComboBoxItem Content="Gelb" Foreground="Yellow"/>
-            <ComboBoxItem Content="Rot" Foreground="Red"/>
+                  Grid.Column="1" Grid.Row="4"
+                  ItemsSource="{Binding Source={StaticResource Odp_ColorsProperties}}"
+                  SelectedValuePath="Name">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
         </ComboBox>
 
         <StackPanel Margin="2"
                     Grid.Column="1" Grid.Row="5">
             <RadioButton Content="M"
-                         GroupName="Rbg_Gender"/>
+                         GroupName="Rbg_Gender"
+                         IsChecked="{Binding Geschlecht, Converter={StaticResource enum2bool}, ConverterParameter={x:Static local:Gender.Männlich}}"/>
             <RadioButton Content="W"
-                         GroupName="Rbg_Gender"/>
+                         GroupName="Rbg_Gender"
+                         IsChecked="{Binding Geschlecht, Converter={StaticResource enum2bool}, ConverterParameter={x:Static local:Gender.Weiblich}}"/>
             <RadioButton Content="D"
-                         GroupName="Rbg_Gender"/>
+                         GroupName="Rbg_Gender"
+                         IsChecked="{Binding Geschlecht, Converter={StaticResource enum2bool}, ConverterParameter={x:Static local:Gender.Divers}}"/>
         </StackPanel>
 
         <WrapPanel Grid.Row="6" Grid.ColumnSpan="2"

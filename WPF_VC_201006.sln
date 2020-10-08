@@ -13,17 +13,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modul03.2_TextboxUebung", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Personendatenbank", "Personendatenbank\Personendatenbank.csproj", "{8BABC5D7-6C6F-4C02-BDD0-0C3AA1781D3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul04_RoutedEvents", "RoutedEvents\Modul04_RoutedEvents.csproj", "{AF14B38D-D92C-4A59-9DB2-0D56CECE940E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modul04_RoutedEvents", "RoutedEvents\Modul04_RoutedEvents.csproj", "{AF14B38D-D92C-4A59-9DB2-0D56CECE940E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul05_Resources", "Ressourcen\Modul05_Resources.csproj", "{B4B91DC2-6B47-49B8-BF21-103A37062B1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modul05_Resources", "Ressourcen\Modul05_Resources.csproj", "{B4B91DC2-6B47-49B8-BF21-103A37062B1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul06.1_Bindings", "Bindings\Modul06.1_Bindings.csproj", "{9168C70D-3B6F-4FF3-A78B-D54565D5EC0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modul06.1_Bindings", "Bindings\Modul06.1_Bindings.csproj", "{9168C70D-3B6F-4FF3-A78B-D54565D5EC0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul06.2_ValueConverter", "ValueConverter\Modul06.2_ValueConverter.csproj", "{901F83C2-7DBD-4209-823F-546558DC19BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modul06.2_ValueConverter", "ValueConverter\Modul06.2_ValueConverter.csproj", "{901F83C2-7DBD-4209-823F-546558DC19BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul07_Styles", "Styles\Modul07_Styles.csproj", "{445BB324-ABA6-46AA-AEF0-C2EDE65C05D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modul07_Styles", "Styles\Modul07_Styles.csproj", "{445BB324-ABA6-46AA-AEF0-C2EDE65C05D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul08_Templates", "Templates\Modul08_Templates.csproj", "{69B8680C-636F-492E-90F0-882E3B0921D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modul08_Templates", "Templates\Modul08_Templates.csproj", "{69B8680C-636F-492E-90F0-882E3B0921D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation", "Validation\Validation.csproj", "{63A4B847-6772-4378-ACBB-4FDA1F9E9A56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{69B8680C-636F-492E-90F0-882E3B0921D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69B8680C-636F-492E-90F0-882E3B0921D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69B8680C-636F-492E-90F0-882E3B0921D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63A4B847-6772-4378-ACBB-4FDA1F9E9A56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63A4B847-6772-4378-ACBB-4FDA1F9E9A56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63A4B847-6772-4378-ACBB-4FDA1F9E9A56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63A4B847-6772-4378-ACBB-4FDA1F9E9A56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
