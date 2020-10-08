@@ -1,0 +1,30 @@
+﻿<Window x:Class="Trigger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Trigger"
+        xmlns:uc="clr-namespace:MyUserControls;assembly=MyUserControls"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="306" Width="363">
+    <StackPanel Background="{Binding ElementName=ColorPicker, Path=PickedColor}">
+        <TextBlock>
+            <TextBlock.Style>
+                <Style TargetType="TextBlock">
+                    <Setter Property="Text" Value="Die BoolVal ist TRUE"/>
+                    <Setter Property="Foreground" Value="Green"/>
+
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding BoolVal}" Value="False">
+                            <Setter Property="Text" Value="Die BoolVal ist FALSE"/>
+                            <Setter Property="Foreground" Value="Red"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
+        <Button Content="Wert ändern" Click="Button_Click"/>
+
+        <uc:ColorPicker x:Name="ColorPicker"/>
+    </StackPanel>
+</Window>

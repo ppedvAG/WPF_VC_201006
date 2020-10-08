@@ -13,7 +13,7 @@
 
     <Window.Resources>
         <local:EnumToBoolConverter x:Key="enum2bool"/>
-        
+
         <ObjectDataProvider x:Key="Odp_Colors"
                             MethodName="GetType"
                             ObjectType="{x:Type sys:Type}">
@@ -23,7 +23,7 @@
             PublicKeyToken=31bf3856ad364e35</sys:String>
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
-        
+
         <ObjectDataProvider x:Key="Odp_ColorsProperties"
                             ObjectInstance="{StaticResource Odp_Colors}"
                             MethodName="GetProperties"/>
@@ -103,7 +103,12 @@
                   Validation.ErrorTemplate="{StaticResource CtpError}">
             <ComboBox.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding Name}"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Border BorderBrush="Black" BorderThickness="1" Width="20" Height="20" Margin="5,0">
+                            <Rectangle Width="20" Height="20" Fill="{Binding Name}"/>
+                        </Border>                        
+                        <TextBlock Text="{Binding Name}"/>
+                    </StackPanel>
                 </DataTemplate>
             </ComboBox.ItemTemplate>
         </ComboBox>
