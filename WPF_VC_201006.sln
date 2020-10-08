@@ -25,13 +25,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modul07_Styles", "Styles\Mo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modul08_Templates", "Templates\Modul08_Templates.csproj", "{69B8680C-636F-492E-90F0-882E3B0921D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation", "Validation\Validation.csproj", "{63A4B847-6772-4378-ACBB-4FDA1F9E9A56}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul09_Validation", "Validation\Modul09_Validation.csproj", "{63A4B847-6772-4378-ACBB-4FDA1F9E9A56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelativeSources", "RelativeSources\RelativeSources.csproj", "{B7A2D967-182A-4109-8A08-D084A860819E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul10_RelativeSources", "RelativeSources\Modul10_RelativeSources.csproj", "{B7A2D967-182A-4109-8A08-D084A860819E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trigger", "Trigger\Trigger.csproj", "{AC473291-3781-4EFD-9C4D-CD4FDB91F2C3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul11_Trigger", "Trigger\Modul11_Trigger.csproj", "{AC473291-3781-4EFD-9C4D-CD4FDB91F2C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyUserControls", "MyUserControls\MyUserControls.csproj", "{18814DDD-3E18-448C-94CE-BED81AF97FB2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul12_MyUserControls", "MyUserControls\Modul12_MyUserControls.csproj", "{18814DDD-3E18-448C-94CE-BED81AF97FB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
