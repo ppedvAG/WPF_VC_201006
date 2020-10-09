@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MVVM_PersonDB"
         xmlns:vm="clr-namespace:MVVM_PersonDB.ViewModel"
+        xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
-        Title="Db_Ansicht" Height="371" Width="617"
+        Title="Personendatenbank" Height="371" Width="676"
         Style="{StaticResource Sty_Wnd}"
         x:Name="Wnd_ListView">
 
@@ -44,8 +45,7 @@
         über eine Kurzbindung an den DataContext gebunden. Die einzelnen Eigenschaften der Objekte (vgl. die
         Column-Einträge) sind per Kurzbindungen an die ItemSource gebunden.
         Mit AutoGenerateColumns="False" verhindert man eine automatische Generierung der Spalten.
-        IsManipulationEnabled="False" und IsReadOnly="True" führen dazu, dass der Benutzer die Einträge nicht 
-        direkt bearbeiten kann.
+        IsReadOnly="True" führen dazu, dass der Benutzer die Einträge nicht direkt bearbeiten kann.
         Setzt man sowohl Background, als auch AlternatingRowBackground, wechseln sich die Zeilen ihre Farbe
         betreffend ab.-->
         <DataGrid x:Name="Dgd_Personen"
@@ -53,7 +53,15 @@
                   ItemsSource="{Binding Personenliste}"
                   AutoGenerateColumns="False"
                   IsReadOnly="True"
-                  IsManipulationEnabled="False">
+                  AlternatingRowBackground="Beige">
+
+            <b:Interaction.Triggers>
+                <b:EventTrigger EventName="MouseDoubleClick">
+                    <b:InvokeCommandAction Command="{Binding AendernCmd}"
+                                           CommandParameter="{Binding ElementName=Dgd_Personen, Path=SelectedItem}"/>
+                </b:EventTrigger>
+            </b:Interaction.Triggers>
+            
             <!--In der Columns-Property definiert man die benötigten Spalten und bindet diese an die ItemSource-->
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Vorname" Binding="{Binding Vorname}" Width="*"/>

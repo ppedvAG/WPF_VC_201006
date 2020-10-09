@@ -24,14 +24,17 @@ namespace MVVM_PersonDB.ViewModel
                     //Exe:
                     p =>
                     {
-                    //Nachfrage auf Korrektheit der Daten per MessageBox
-                    if (MessageBox.Show("Soll die Person gespeichert werden?", "Person abspeichern", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                        string ausgabe = AktuellePerson.Vorname + " " + AktuellePerson.Nachname + " (" + AktuellePerson.Geschlecht + ")\n" + AktuellePerson.Geburtsdatum.ToShortDateString() + "\n" + AktuellePerson.Lieblingsfarbe.ToString();
+                        ausgabe += AktuellePerson.Verheiratet ? "\nIst Verheiratet" : "";
+
+                        //Nachfrage auf Korrektheit der Daten per MessageBox
+                        if (MessageBox.Show(ausgabe + "\nSoll diese Person gespeichert werden?", $"{AktuellePerson.Vorname} {AktuellePerson.Nachname} abspeichern", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                         {
-                        //Setzen des DialogResults des Views (welches per Parameter übergeben wurde) auf true, damit das LIstView weiß, dass es weiter
-                        //machen kann (d.h. die neuen Person einfügen bzw. austauschen)
-                        (p as View.DetailView).DialogResult = true;
-                        //Schließen des Views
-                        (p as View.DetailView).Close();
+                            //Setzen des DialogResults des Views (welches per Parameter übergeben wurde) auf true, damit das LIstView weiß, dass es weiter
+                            //machen kann (d.h. die neuen Person einfügen bzw. austauschen)
+                            (p as View.DetailView).DialogResult = true;
+                            //Schließen des Views
+                            (p as View.DetailView).Close();
                         }
                     }
                 );

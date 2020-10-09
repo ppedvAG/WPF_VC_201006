@@ -37,6 +37,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul13_Commands", "Command
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVM_PersonDB", "MVVM_PersonDB\MVVM_PersonDB.csproj", "{57E03E4B-017D-41FF-BB2F-41D3E5345FA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul14_Localisation", "Localisation\Modul14_Localisation.csproj", "{6B33C2E5-FED8-4DFE-8174-B045B0217F2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul15_Animations", "Animations\Modul15_Animations.csproj", "{A53BA027-C74E-4840-B0DB-90B1C1B27C85}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +115,14 @@ Global
 		{57E03E4B-017D-41FF-BB2F-41D3E5345FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57E03E4B-017D-41FF-BB2F-41D3E5345FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57E03E4B-017D-41FF-BB2F-41D3E5345FA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B33C2E5-FED8-4DFE-8174-B045B0217F2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B33C2E5-FED8-4DFE-8174-B045B0217F2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B33C2E5-FED8-4DFE-8174-B045B0217F2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B33C2E5-FED8-4DFE-8174-B045B0217F2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A53BA027-C74E-4840-B0DB-90B1C1B27C85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A53BA027-C74E-4840-B0DB-90B1C1B27C85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A53BA027-C74E-4840-B0DB-90B1C1B27C85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A53BA027-C74E-4840-B0DB-90B1C1B27C85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

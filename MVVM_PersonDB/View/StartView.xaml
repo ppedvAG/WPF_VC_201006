@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:MVVM_PersonDB.View"
         xmlns:vm="clr-namespace:MVVM_PersonDB.ViewModel"
         mc:Ignorable="d"
-        Title="Personendatenbank" Height="189" Width="358"
+        Title="Personendatenbank" Height="166" Width="358"
         Style="{StaticResource Sty_Wnd}"
         x:Name="Wnd_StartView">
 
