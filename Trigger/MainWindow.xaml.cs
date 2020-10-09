@@ -42,6 +42,7 @@ namespace Trigger
             this.BoolVal = true;
 
             this.DataContext = this;
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -58,7 +58,7 @@
                     x:Name="Sdr_Red"
                     Value="255"
                     IsSnapToTickEnabled="True"/>
-            <TextBox Grid.Column="3" Width="40" 
+            <TextBox Grid.Column="2" Width="40" 
                      Text="{Binding ElementName=Sdr_Red, Path=Value, UpdateSourceTrigger=PropertyChanged}"/>
 
             <TextBlock Grid.Row="1"
@@ -68,7 +68,7 @@
                     x:Name="Sdr_Green"
                     Value="255"
                     IsSnapToTickEnabled="True"/>
-            <TextBox Grid.Column="3" Grid.Row="1" Width="40" 
+            <TextBox Grid.Column="2" Grid.Row="1" Width="40" 
                      Text="{Binding ElementName=Sdr_Green, Path=Value, UpdateSourceTrigger=PropertyChanged}"/>
 
             <TextBlock Grid.Row="2"
@@ -78,7 +78,7 @@
                     x:Name="Sdr_Blue"
                     Value="255"
                     IsSnapToTickEnabled="True"/>
-            <TextBox Grid.Column="3" Grid.Row="2" Width="40" 
+            <TextBox Grid.Column="2" Grid.Row="2" Width="40" 
                      Text="{Binding ElementName=Sdr_Blue, Path=Value, UpdateSourceTrigger=PropertyChanged}"/>
 
             <TextBlock Grid.Row="3"
@@ -88,7 +88,7 @@
                     x:Name="Sdr_Alpha"
                     Value="255"
                     IsSnapToTickEnabled="True"/>
-            <TextBox Grid.Column="3" Grid.Row="3" Width="40" 
+            <TextBox Grid.Column="2" Grid.Row="3" Width="40" 
                      Text="{Binding ElementName=Sdr_Alpha, Path=Value, UpdateSourceTrigger=PropertyChanged}"/>
 
         </Grid>

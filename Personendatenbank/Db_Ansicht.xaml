@@ -18,7 +18,7 @@
             <MenuItem Header="Datei">
                 <MenuItem x:Name="MeI_Beenden" 
                           Header="Beenden"
-                          Click="MeI_Beenden_Click">
+                          Click="MeI_Beenden_Click"/>
             </MenuItem>
         </Menu>
         <WrapPanel DockPanel.Dock="Bottom"

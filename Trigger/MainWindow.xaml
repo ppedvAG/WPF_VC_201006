@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Trigger"
         xmlns:uc="clr-namespace:MyUserControls;assembly=MyUserControls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="306" Width="363">
+        Title="MainWindow" Height="395" Width="363">
     <StackPanel Background="{Binding ElementName=ColorPicker, Path=PickedColor}">
         <TextBlock>
             <TextBlock.Style>
@@ -26,5 +26,12 @@
         <Button Content="Wert ändern" Click="Button_Click"/>
 
         <uc:ColorPicker x:Name="ColorPicker"/>
+
+        <uc:NumericUpDown x:Name="Nud_Test"
+                          Value="23"
+                          Height="30"
+                          Width="150"/>
+
+        <TextBlock Text="{Binding ElementName=Nud_Test, Path=Value}"/>
     </StackPanel>
 </Window>
