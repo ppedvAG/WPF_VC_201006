@@ -35,6 +35,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modul12_MyUserControls", "M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commands", "Commands\Commands.csproj", "{D2C931E0-53E4-44F4-88B2-9E7C006B7FCC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVM_PersonDB", "MVVM_PersonDB\MVVM_PersonDB.csproj", "{57E03E4B-017D-41FF-BB2F-41D3E5345FA5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{D2C931E0-53E4-44F4-88B2-9E7C006B7FCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2C931E0-53E4-44F4-88B2-9E7C006B7FCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2C931E0-53E4-44F4-88B2-9E7C006B7FCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57E03E4B-017D-41FF-BB2F-41D3E5345FA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57E03E4B-017D-41FF-BB2F-41D3E5345FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57E03E4B-017D-41FF-BB2F-41D3E5345FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57E03E4B-017D-41FF-BB2F-41D3E5345FA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
