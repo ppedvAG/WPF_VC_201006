@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modul03.1_Container", "Modu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modul03.2_TextboxUebung", "Modul03.2_TextboxUebung\Modul03.2_TextboxUebung.csproj", "{E2D2916A-D5B1-4886-A828-2565679171C0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Personendatenbank", "Personendatenbank\Personendatenbank.csproj", "{8BABC5D7-6C6F-4C02-BDD0-0C3AA1781D3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Personendatenbank (vgl. MVVM)", "Personendatenbank\Personendatenbank (vgl. MVVM).csproj", "{8BABC5D7-6C6F-4C02-BDD0-0C3AA1781D3E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modul04_RoutedEvents", "RoutedEvents\Modul04_RoutedEvents.csproj", "{AF14B38D-D92C-4A59-9DB2-0D56CECE940E}"
 EndProject
@@ -33,7 +33,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modul11_Trigger", "Trigger\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modul12_MyUserControls", "MyUserControls\Modul12_MyUserControls.csproj", "{18814DDD-3E18-448C-94CE-BED81AF97FB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commands", "Commands\Commands.csproj", "{D2C931E0-53E4-44F4-88B2-9E7C006B7FCC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modul13_Commands", "Commands\Modul13_Commands.csproj", "{D2C931E0-53E4-44F4-88B2-9E7C006B7FCC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVM_PersonDB", "MVVM_PersonDB\MVVM_PersonDB.csproj", "{57E03E4B-017D-41FF-BB2F-41D3E5345FA5}"
 EndProject

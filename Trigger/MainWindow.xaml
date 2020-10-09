@@ -15,6 +15,8 @@
                     <Setter Property="Foreground" Value="Green"/>
 
                     <Style.Triggers>
+                        <!--Mittels Trigger kann das Verhalten/Aussehen von Objekten unter bestimmten Umständen geändert werden-->
+                        <!--Der DataTrigger reagiert auf eine Veränderung einer WPF- oder .NET-Property>-->
                         <DataTrigger Binding="{Binding BoolVal}" Value="False">
                             <Setter Property="Text" Value="Die BoolVal ist FALSE"/>
                             <Setter Property="Foreground" Value="Red"/>
@@ -25,6 +27,11 @@
         </TextBlock>
         <Button Content="Wert ändern" Click="Button_Click"/>
 
+        <!--Andere Triggerarten sind
+        EventTrigger: Dieser reagiert auf eine geworfenes RoutedEvent (vgl. Animationen)
+        PropertyTrigger: Dieser reagiert auf eine veränderte WPF-Property (nicht bei .NET-Properties anwendbar / vgl. Templates)-->
+
+        <!--Einbindung der UserControls aus Modul 12-->
         <uc:ColorPicker x:Name="ColorPicker"/>
 
         <uc:NumericUpDown x:Name="Nud_Test"

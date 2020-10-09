@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="MainWindow" Height="410" Width="510">
+    <!--Für eine relative Bindung (eine Bindung ohne Angabe des spezifischen zu bindenen Objekts) muss in die
+    gewünschte Property ein Bidungsobjekt gelegt werden, in dessen Eigenschaft 'RelativeSource' ein
+    RelativSource-Objekt gelegt wurde-->
     <StackPanel>
         <Slider Minimum="0" Maximum="500" Value="{Binding ElementName=Rct_Show, Path=Height}"/>
+        <!--Mittels dem Mode=Self kann eine Property an eine andere Property des selben Objekts gebunden werden-->
         <Rectangle x:Name="Rct_Show"
                    Fill="Black"
                    Width="{Binding RelativeSource={RelativeSource Mode=Self}, Path=Height}"
@@ -15,6 +19,9 @@
         <StackPanel Background="LightBlue" Margin="30">
             <StackPanel Background="Yellow" Margin="30">
                 <StackPanel Background="Green" Margin="30" Height="100">
+                    <!--Mittels dem Mode=FindAncestor kann eine Property an eine Property eines hirachisch übergeordneten
+                    Objekts gebunden werden. Mittels der Property 'AnchestorType' kann die Art des Objekts definiert werden 
+                    und mittels 'AnchestorLevel' kann die Ebene des Objekts bestimmt werden-->
                     <Button Content="Hallo" Margin="30"
                             Background="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type StackPanel}, AncestorLevel=3}, Path=Background}"/>
                 </StackPanel>

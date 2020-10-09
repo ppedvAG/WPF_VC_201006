@@ -13,13 +13,11 @@ using System.Windows.Shapes;
 namespace MVVM_PersonDB.View
 {
     /// <summary>
-    /// Interaction logic for StartView.xaml
+    /// Interaction logic for DetailView.xaml
     /// </summary>
-    public partial class StartView : Window
+    public partial class DetailView : Window
     {
-        //Die einzigen CodeBehind-Einträge innerhalb der Views dürfen die vorgenerierten Einträge sein (Konstruktor und sämtliche Teile im der anderen
-        //Klassendatei (s. partial)
-        public StartView()
+        public DetailView()
         {
             InitializeComponent();
         }

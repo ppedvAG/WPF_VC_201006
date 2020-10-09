@@ -3,15 +3,74 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MVVM_PersonDB.View"
+        xmlns:local="clr-namespace:MVVM_PersonDB"
         xmlns:vm="clr-namespace:MVVM_PersonDB.ViewModel"
         mc:Ignorable="d"
-        Title="ListView" Height="450" Width="800">
+        Title="Db_Ansicht" Height="371" Width="617"
+        Style="{StaticResource Sty_Wnd}"
+        x:Name="Wnd_ListView">
+
     <Window.DataContext>
         <vm:ListViewModel/>
     </Window.DataContext>
-    
-    <Grid>
-        
-    </Grid>
+
+    <Window.Resources>
+        <local:ColorToBrushConverter x:Key="color2brush"/>
+    </Window.Resources>
+
+    <DockPanel Margin="5">
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Datei">
+                <MenuItem x:Name="MeI_Beenden" 
+                          Header="Beenden"
+                          Command="{Binding SchliessenCmd}"
+                          CommandParameter="{Binding ElementName=Wnd_ListView}"/>
+            </MenuItem>
+        </Menu>
+        <WrapPanel DockPanel.Dock="Bottom"
+                   HorizontalAlignment="Right"
+                   Margin="10,0,10,5">
+            <Button x:Name="Btn_Neu" Content="Neue Person"
+                    Command="{Binding NeuCmd}"/>
+            <!--Der Aendern- und der Loeschen-Command übergaben als Parameter das in dem DataGrid ausgewählte Objekt-->
+            <Button x:Name="Btn_Aendern" Content="Person ändern"
+                    Command="{Binding AendernCmd}"
+                    CommandParameter="{Binding ElementName=Dgd_Personen, Path=SelectedItem}"/>
+            <Button x:Name="Btn_Loeschen" Content="Person löschen"
+                    Command="{Binding LoeschenCmd}"
+                    CommandParameter="{Binding ElementName=Dgd_Personen, Path=SelectedItem}"/>
+        </WrapPanel>
+        <!--DataGrids werden zur Visualisierung komplexer Datenlisten verwendet. Die ItemSource-Property ist
+        über eine Kurzbindung an den DataContext gebunden. Die einzelnen Eigenschaften der Objekte (vgl. die
+        Column-Einträge) sind per Kurzbindungen an die ItemSource gebunden.
+        Mit AutoGenerateColumns="False" verhindert man eine automatische Generierung der Spalten.
+        IsManipulationEnabled="False" und IsReadOnly="True" führen dazu, dass der Benutzer die Einträge nicht 
+        direkt bearbeiten kann.
+        Setzt man sowohl Background, als auch AlternatingRowBackground, wechseln sich die Zeilen ihre Farbe
+        betreffend ab.-->
+        <DataGrid x:Name="Dgd_Personen"
+                  Margin="10"
+                  ItemsSource="{Binding Personenliste}"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  IsManipulationEnabled="False">
+            <!--In der Columns-Property definiert man die benötigten Spalten und bindet diese an die ItemSource-->
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Vorname" Binding="{Binding Vorname}" Width="*"/>
+                <DataGridTextColumn Header="Nachname" Binding="{Binding Nachname}" Width="*"/>
+                <DataGridTextColumn Header="Geschlecht" Binding="{Binding Geschlecht}" Width="Auto"/>
+                <DataGridTextColumn Header="Geburtsdatum" Binding="{Binding Geburtsdatum, StringFormat=dd.MM.yyyy}" Width="Auto"/>
+                <DataGridCheckBoxColumn Header="Verheiratet" Binding="{Binding Verheiratet}" Width="Auto"/>
+                <DataGridTextColumn Header="Lieblingsfarbe" Binding="{Binding Lieblingsfarbe}" Width="Auto">
+                    <!--Mithilfe der CellStyle-Property können die Styles von Zellen angepasst werden-->
+                    <DataGridTextColumn.CellStyle>
+                        <Style TargetType="DataGridCell">
+                            <Setter Property="Background" Value="{Binding Lieblingsfarbe, Converter={StaticResource color2brush}}"/>
+                        </Style>
+                    </DataGridTextColumn.CellStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+
 </Window>
